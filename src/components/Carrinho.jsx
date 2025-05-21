@@ -7,7 +7,9 @@ export default function Carrinho(){
             <h2>Carrinho</h2>
             <ul>
                 {carrinho.map(item => (
-
+                    <li>
+                        
+                    </li>
                 ))}
             </ul>
         </div>
