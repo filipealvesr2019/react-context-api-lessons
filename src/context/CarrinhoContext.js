@@ -24,7 +24,7 @@ export const CarrinhoProvider = ({ children }) => {
     }
 
     return (
-        <CarrinhoContext.Provider>
+        <CarrinhoContext.Provider value={{ carrinho, AdicionarAoCarrinho, removerDoCarrinho}}>
             {children}
         </CarrinhoContext.Provider>
     )
