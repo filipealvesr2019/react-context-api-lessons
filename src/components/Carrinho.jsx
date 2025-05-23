@@ -13,7 +13,7 @@ export default function Carrinho(){
                     </li>
                 ))}
             </ul>
-            <h3>Total: R${carrinho.reduce((total) => total)}</h3>
+            <h3>Total: R${carrinho.reduce((total, item) => total + item.preco * item.quantidade, 0).toFixed(2)}</h3>
         </div>
     )
 }
