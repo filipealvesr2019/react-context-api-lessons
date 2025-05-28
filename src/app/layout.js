@@ -1,5 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { CarrinhoProvider } from "@/context/CarrinhoContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+              <CarrinhoProvider>
         {children}
+              </CarrinhoProvider>
+        
       </body>
     </html>
   );

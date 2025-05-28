@@ -1,12 +1,10 @@
 import Image from "next/image";
 import styles from "./page.module.css";
-import { CarrinhoProvider } from "@/context/CarrinhoContext";
 import ProductList from "@/components/ProductList";
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <CarrinhoProvider>
       <main className={styles.main}>
        <ProductList />
       </main>
@@ -56,7 +54,7 @@ export default function Home() {
         </a>
       </footer>
 
-      </CarrinhoProvider>
+      
     </div>
   );
 }

@@ -1,6 +1,6 @@
-"use Client";
+"use client";
 
-const { createContext } = require("react");
+const { createContext, useState } = require("react");
 
 const CarrinhoContext = createContext();
 
