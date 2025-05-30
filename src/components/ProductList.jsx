@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import ProdutoItem from "./ProdutoItem.";
 
 export default function ProductList(){
     const [produtos, setProdutos] = useState([]);
