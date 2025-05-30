@@ -5,7 +5,7 @@ export default function ProductList(){
     const [produtos, setProdutos] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3001/produtos`)
+        fetch(`http://localhost:3000/produtos`)
         .then(response => response.json())
         .then(setProdutos)
 
