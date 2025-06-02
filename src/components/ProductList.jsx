@@ -7,10 +7,17 @@ export default function ProductList(){
 
     useEffect(() => {
         fetch(`http://localhost:3000/produtos`)
-        .then(response => response.json())
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Erro ao buscar produtos")
+            }
+            return response.json()
+        })
         .then(setProdutos)
+        .catch(error => console.log('Error ao buscar produtos', error))
 
     }, [])
+    console.log(produtos)
     return (
         <div>
             <h2>Produtos</h2>
