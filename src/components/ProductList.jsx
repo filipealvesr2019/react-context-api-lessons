@@ -6,7 +6,7 @@ export default function ProductList(){
     const [produtos, setProdutos] = useState([]);
 
     useEffect(() => {
-        fetch(`http://localhost:3000/produtos`)
+        fetch(`http://localhost:3001/produtos`)
         .then(response => {
             if(!response.ok){
                 throw new Error("Erro ao buscar produtos")
