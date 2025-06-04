@@ -2,6 +2,7 @@ import { useCarrinho } from "@/context/CarrinhoContext"
 
 export default function ProdutoItem({ produto }){
     const { AdicionarAoCarrinho } = useCarrinho();
+    
     return (
         <div>
             <h3>{produto.nome}</h3>

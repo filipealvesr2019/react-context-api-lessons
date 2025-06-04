@@ -9,13 +9,19 @@ export const useCarrinho = () => useContext(CarrinhoContext);
 export const CarrinhoProvider = ({ children }) => {
     const [carrinho, setCarrinho] = useState([]);
 
-    const AdicionarAoCarrinho = (produto, quantidade) => {
+    const AdicionarAoCarrinho = async (produto, quantidade) => {
         const produtoExistente = carrinho.find(item => item.produtoId === produto._id);
         if(produtoExistente){
             produtoExistente.quantidade += quantidade;
             setCarrinho([...carrinho])
         } else {
             setCarrinho([...carrinho, {...produto, quantidade}])
+        }
+
+        try {
+            await fetch(`http://localhost:3001/carrinho/adicionar${produto._id}/${quantidade}`)
+        } catch (error){
+            console.log(error)
         }
     }
 
