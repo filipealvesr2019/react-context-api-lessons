@@ -19,7 +19,9 @@ export const CarrinhoProvider = ({ children }) => {
         }
 
         try {
-            await fetch(`http://localhost:3001/carrinho/adicionar${produto._id}/${quantidade}`)
+            await fetch(`http://localhost:3001/carrinho/adicionar/${produto._id}/${quantidade}`, {
+                method: 'POST'
+            })
         } catch (error){
             console.log(error)
         }
