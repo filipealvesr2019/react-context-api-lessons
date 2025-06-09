@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import ProductList from "@/components/ProductList";
 import Link from "next/link";
+import CarrinhoIcon from "@/components/CarrinhoIcon";
 
 export default function Home() {
   return (
@@ -9,7 +10,7 @@ export default function Home() {
       <header className={styles.header}>
         <span>Logo</span>
         <Link href={"/carrinho"}> 
-        <div>Carrinho</div>
+        <CarrinhoIcon />
         
         </Link>
       </header>
